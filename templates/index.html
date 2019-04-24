@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Computer Vision</title>
+
+  <!--Load CSS-->
+ <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/mystyle.css') }}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css "href="{{url_for('static', filename='css/bootstrap-responsive.css')}}">
+
+<style type="text/css">
+   body { background-image: url({{ url_for('static', filename='img/bg2.jpeg') }}); 
+background-repeat:no-repeat;
+background-size: cover; } 
+/* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+</style>
+
+<!--Load jQuery-->
+<script type="text/javascript" src="static/js/jquery.js"></script>
+</head>
+
+  <!--CODING HERE-->
+
+  <div class="container">
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li><a href="#"> Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+  <!-- Main hero unit for a primary marketing message or call to action -->
+  <div class="hero-unit">
+    <h3>Hello There!!</h3>
+    A site used for testing image processing. If you are curious then choose one of the functions in the menu below then click 'GO'. You will see the 'magic'
+    <br>
+    <!--
+    <img src="{{ url_for('static', filename = 'img/download.jpeg') }}" width="200" height="85">
+    <img src="{{ url_for('static', filename = 'img/sachin.jpeg') }}" width="200" height="85">
+  -->
+
+            <!-------->
+            <form class="form-inline" method="POST" action="{{ url_for('test') }}">
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">Please select</span>
+                  <select name="func_select" class="selectpicker form-control">
+                    {% for o in index_func %}
+                    <option value="{{ o.object_detection }}">{{ o.object_detection }}</option>
+                    {% endfor %}
+                  </select>
+                  <!-------->   
+                </div>
+                <button type="submit" class="btn btn-default">Go</button>
+              </div>
+            </form>
+
+          </div>
+
+          <div class="footer">
+            <p>&copy;Hernanda Agung</a></p>
+          </footer>
+
+        </div> <!-- /container -->
+
+        <!--Load Bootstrap JS ( Diletakan dibawah merupakan rekomendasi,agar proses load page lebih cepat )-->
+        <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+      </body>
+
+      </html>

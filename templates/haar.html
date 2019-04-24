@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Load CSS-->
+ <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+  <!--
+  <link href="{{ url_for('static', filename='css/mystyle.css') }}" rel="stylesheet">
+   -->
+  <link rel="stylesheet" type="text/css "href="{{url_for('static', filename='css/bootstrap-responsive.css')}}">
+
+  <style type="text/css">
+body{  
+background:black;
+background-repeat:no-repeat;
+background-size: cover; } 
+}
+/* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+</style>
+
+<!--Load jQuery-->
+<script type="text/javascript" src="static/js/jquery.js"></script>
+
+<!-- Function untuk tampilin image yg dicapture haar -->
+ <script type = "text/javascript">
+    function displayNextImage() {
+        x = (x === images.length - 1) ? 0 : x + 1;
+        document.getElementById("img").src = images[x];
+    }
+
+    function displayPreviousImage() {
+        x = (x <= 0) ? images.length - 1 : x - 1;
+        document.getElementById("img").src = images[x];
+    }
+
+    function startTimer() {
+        setInterval(displayNextImage, 10000);
+    }
+
+    var images = [], x = -1;
+    images[0] = "/static/img/haar_img/img0.jpg";
+    images[1] = "/static/img/haar_img/img1.jpg";
+    //images[2] = "/static/img/image3.jpg";
+//     function refresh(node)
+// {
+//    var times = 3000; // gap in Milli Seconds;
+
+//    (function startRefresh()
+//    {
+//       var address;
+//       if(node.src.indexOf('?')>-1)
+//        address = node.src.split('?')[0];
+//       else 
+//        address = node.src;
+//       node.src = address+"?time="+new Date().getTime();
+
+//       setTimeout(startRefresh,times);
+//    })();
+
+// }
+
+// window.onload = function()
+// {
+//   var node = document.getElementById('img').src="/static/img/haar_img/img.jpg";
+//   refresh(node);
+//   // you can refresh as many images you want just repeat above steps
+// }
+</script>
+      
+  </head>
+  <body onload = "startTimer()">
+    
+    <div class="jumbotron" align="middle">
+      
+    <font color="white"> 
+      <h4>Haar Cascade</h4></font>
+      <img id="bg" class="img-rounded" src="{{ url_for('video_feed',index=2) }}" width="480" height="640"> 
+
+     <br>
+     <br>
+            <p><a href="{{ url_for('test') }}" class="btn btn-primary btn-small">Back to Main Page &raquo;</a></p>
+      <font color="white"> 
+      <h4>Real time image captured</h4>
+    </font>
+
+       <img id="img" widht="50" height="50"/>
+    </div>
+
+ 
+
+<!--
+       <button type="button" onclick="displayPreviousImage()">Previous</button>
+       <button type="button" onclick="displayNextImage()">Next</button>
+-->
+
+
+  
+  </body>
+</html>

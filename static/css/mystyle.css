@@ -1,0 +1,21 @@
+.hero-unit {
+  opacity: 0.7;
+  font-size: 14px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+ .footer{ 
+       position: fixed;     
+       text-align: left;    
+       bottom: 0px; 
+       width: 100%;
+       color:white;
+       font-weight: 200;
+       font-size: 18px;
+       opacity: .7;
+
+   } 
+
+   .navbar .brand {
+  font-size: 24px;
+}

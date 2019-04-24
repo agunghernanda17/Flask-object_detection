@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Load CSS-->
+ <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+  <!--
+  <link href="{{ url_for('static', filename='css/mystyle.css') }}" rel="stylesheet">
+   -->
+  <link rel="stylesheet" type="text/css "href="{{url_for('static', filename='css/bootstrap-responsive.css')}}">
+
+  <style type="text/css">
+background-repeat:no-repeat;
+background-size: cover; } 
+/* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+</style>
+
+<!--Load jQuery-->
+<script type="text/javascript" src="static/js/jquery.js"></script>
+	</head>
+  <body>
+  	
+  	 
+
+		<div class="jumbotron" align="middle">
+			<h3>Ball Tracking</h3>
+			<img id="bg" class="img-rounded" src="{{ url_for('video_feed',index=1) }}" width="480" height="640"> 
+		
+  	 <br>
+  	 <br>
+              <p><a href="{{ url_for('test') }}" class="btn btn-primary btn-small">Back to Main Page &raquo;</a></p>
+  	 <div class="container">
+  	 
+  	 	<h5>Place the ball on the screen and hold it , and you will see the red dot is highlighting the ball </h5>
+  	
+  	 </div> 
+  </body>
+</html>
