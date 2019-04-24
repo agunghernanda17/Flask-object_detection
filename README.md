@@ -1,16 +1,28 @@
-## Video Streaming with Flask Example
-
-### Website
-http://www.chioka.in
+## Flask-object_detection
 
 ### Description
-Modified to support streaming out with webcams, and not just raw JPEGs.
+The basis of this project is about web records using flask frameworks. 
+I modified it by adding object tracking such as ball-tracking 
+and image processing haar-cascade
 
 ### Credits
-Most of the code credits to Miguel Grinberg, except that I made a small tweak. Thanks!
-http://blog.miguelgrinberg.com/post/video-streaming-with-flask
+Web recording using flask  
+http://blog.miguelgrinberg.com/post/video-streaming-with-flask  
+
+Ball tracking using OpenCV  
+https://www.pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/  
 
 ### Usage
 1. Install Python dependencies: cv2, flask. (wish that pip install works like a charm)
 2. Run "python main.py".
 3. Navigate the browser to the local webpage.
+
+### Screenshot Program
+#### Main page
+<img src="https://github.com/agunghernanda17/Flask-object_detection/blob/master/screnshoot%20program/main_page.png" height="70%" width="70%">    
+
+#### Ball-Tracking 
+<img src="https://github.com/agunghernanda17/Flask-object_detection/blob/master/screnshoot%20program/ball_tracking.png" height="70%" width="70%">   
+
+#### Haar-Cascade
+<img src="https://github.com/agunghernanda17/Flask-object_detection/blob/master/screnshoot%20program/haar_cascade.png" height="70%" width="70%">
