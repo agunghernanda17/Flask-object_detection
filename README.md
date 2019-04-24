@@ -13,7 +13,7 @@ Ball tracking using OpenCV
 https://www.pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/  
 
 ### Usage
-1. Install Python dependencies: cv2, flask. (wish that pip install works like a charm)
+1. Install Python dependencies: cv2, flask. (pip install -r requirements.txt)
 2. Run "python main.py".
 3. Navigate the browser to the local webpage.
 
