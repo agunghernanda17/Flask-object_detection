@@ -14,5 +14,5 @@ MarkupSafe==1.1.1
 numpy==1.16.0
 six==1.12.0
 visitor==0.1.3
-Werkzeug==0.15.1
+Werkzeug==0.15.3
 WTForms==2.2.1
